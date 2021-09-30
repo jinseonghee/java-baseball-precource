@@ -7,10 +7,16 @@ package baseball;
  3. 각 결과를 종합한다.
  */
 
+import baseball.domain.NubmerGenerator;
+
+import java.util.List;
+
 public class Application {
 
     public static void main(String[] args) {
 
-
+        NubmerGenerator generator = new NubmerGenerator();
+        List<Integer> numbers = generator.createRandomNumbers();
+        System.out.println(numbers);
     }
 }
