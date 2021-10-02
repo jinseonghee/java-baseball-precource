@@ -5,10 +5,18 @@ import java.util.List;
 public class Judgment {
 
     public int correctCount(List<Integer> computer, List<Integer> player) {
-        return 0;
+
+        int result = 0;
+        for(int i = 0; i < player.size(); i ++) {
+            int playerNumber = player.get(i);
+            if(computer.contains(playerNumber)) {
+                result++;
+            }
+        }
+        return result;
     }
 
-    public boolean hasPlace(int placeNumber, int number) { //특정 자리, 특정 숫자가 있는지
+    public boolean hasPlace(List<Integer> computer, int placeNumber, int number) {
         return false;
     }
 }

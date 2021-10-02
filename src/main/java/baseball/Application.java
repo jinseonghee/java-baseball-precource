@@ -7,16 +7,25 @@ package baseball;
  3. 각 결과를 종합한다.
  */
 
+import baseball.domain.Judgment;
 import baseball.domain.NubmerGenerator;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Application {
 
     public static void main(String[] args) {
 
+        /*
         NubmerGenerator generator = new NubmerGenerator();
         List<Integer> numbers = generator.createRandomNumbers();
         System.out.println(numbers);
+        */
+
+        Judgment judgment = new Judgment();
+        final int count = judgment.correctCount(Arrays.asList(2,8,9), Arrays.asList(1,2,3)); //Arrays.asList를 이용해 List를 만듦
+        System.out.println(count); // 3
     }
 }
