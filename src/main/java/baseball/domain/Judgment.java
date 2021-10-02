@@ -16,7 +16,15 @@ public class Judgment {
         return result;
     }
 
-    public boolean hasPlace(List<Integer> computer, int placeNumber, int number) {
+    public boolean hasPlace(List<Integer> computer, int placeIndex, int number) {
+
+        return computer.get(placeIndex) == number; // 밑에와 같은 코드를 한줄로 줄임.
+
+        /*
+        if (computer.get(placeIndex) == number ) { //placeIndex의 숫자를 꺼냈을때 number랑 같은지를 바교
+         return true;
+        }
         return false;
+        */
     }
 }
