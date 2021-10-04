@@ -9,7 +9,9 @@ package baseball;
 
 import baseball.domain.Judgment;
 import baseball.domain.NubmerGenerator;
+import baseball.domain.Referee;
 
+import java.sql.Ref;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -18,19 +20,24 @@ public class Application {
 
     public static void main(String[] args) {
 
+        Referee referee = new Referee();
+        String result = referee.compare(Arrays.asList(3, 1, 2), Arrays.asList(1, 2, 3));
+        System.out.println(result);
+
         /*
         NubmerGenerator generator = new NubmerGenerator();
         List<Integer> numbers = generator.createRandomNumbers();
         System.out.println(numbers);
-        */
+
 
         Judgment judgment = new Judgment();
-        /*
+
         final int count = judgment.correctCount(Arrays.asList(2,8,9), Arrays.asList(1,2,3)); //Arrays.asList를 이용해 List를 만듦
         System.out.println(count); // 3
-        */
 
-        final boolean place = judgment.hasPlace(Arrays.asList(7,8,9), 1, 7);
+
+        final boolean place = judgment.hasPlace(Arrays.asList(7,8,9), 0, 7);
         System.out.println(place); //true
+        */
     }
 }

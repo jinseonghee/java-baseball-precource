@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Judgment {
 
-    public int correctCount(List<Integer> computer, List<Integer> player) {
+    public int correctCount(List<Integer> computer, List<Integer> player) { // == 볼의 개수
 
         int result = 0;
         for(int i = 0; i < player.size(); i ++) {
@@ -16,7 +16,7 @@ public class Judgment {
         return result;
     }
 
-    public boolean hasPlace(List<Integer> computer, int placeIndex, int number) {
+    public boolean hasPlace(List<Integer> computer, int placeIndex, int number) { // == 스트라이크의 개수
 
         return computer.get(placeIndex) == number; // 밑에와 같은 코드를 한줄로 줄임.
 
